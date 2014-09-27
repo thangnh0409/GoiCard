@@ -23,6 +23,16 @@
 		CE541E3919D65FA400434B6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1419D65FA300434B6A /* Foundation.framework */; };
 		CE541E4119D65FA400434B6A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE541E3F19D65FA400434B6A /* InfoPlist.strings */; };
 		CE541E4419D65FA400434B6A /* GoiCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E4319D65FA400434B6A /* GoiCardTests.m */; };
+		CE541E5019D660C100434B6A /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E4F19D660C100434B6A /* Card.m */; };
+		CE541E5619D6615D00434B6A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E5419D6615D00434B6A /* MainMenuViewController.m */; };
+		CE541E5719D6615D00434B6A /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E5519D6615D00434B6A /* MainMenuViewController.xib */; };
+		CE541E5B19D661AE00434B6A /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E5A19D661AE00434B6A /* DBManager.m */; };
+		CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E6919D6663F00434B6A /* AddCardViewController.m */; };
+		CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E6A19D6663F00434B6A /* AddCardViewController.xib */; };
+		CE541E7019D6668C00434B6A /* FrontCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E6E19D6668C00434B6A /* FrontCardViewController.m */; };
+		CE541E7119D6668C00434B6A /* FrontCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */; };
+		CE541E7519D666A500434B6A /* BackCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E7319D666A500434B6A /* BackCardViewController.m */; };
+		CE541E7619D666A500434B6A /* BackCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E7419D666A500434B6A /* BackCardViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +68,22 @@
 		CE541E4019D65FA400434B6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE541E4219D65FA400434B6A /* GoiCardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoiCardTests.h; sourceTree = "<group>"; };
 		CE541E4319D65FA400434B6A /* GoiCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoiCardTests.m; sourceTree = "<group>"; };
+		CE541E4E19D660C100434B6A /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Card.h; path = Model/Card.h; sourceTree = "<group>"; };
+		CE541E4F19D660C100434B6A /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Card.m; path = Model/Card.m; sourceTree = "<group>"; };
+		CE541E5319D6615D00434B6A /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenuViewController.h; path = Controller/MainMenuViewController.h; sourceTree = "<group>"; };
+		CE541E5419D6615D00434B6A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = Controller/MainMenuViewController.m; sourceTree = "<group>"; };
+		CE541E5519D6615D00434B6A /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = Controller/MainMenuViewController.xib; sourceTree = "<group>"; };
+		CE541E5919D661AE00434B6A /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = DBManager/DBManager.h; sourceTree = "<group>"; };
+		CE541E5A19D661AE00434B6A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = DBManager/DBManager.m; sourceTree = "<group>"; };
+		CE541E6819D6663F00434B6A /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = Controller/AddCardViewController.h; sourceTree = "<group>"; };
+		CE541E6919D6663F00434B6A /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = Controller/AddCardViewController.m; sourceTree = "<group>"; };
+		CE541E6A19D6663F00434B6A /* AddCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardViewController.xib; path = Controller/AddCardViewController.xib; sourceTree = "<group>"; };
+		CE541E6D19D6668C00434B6A /* FrontCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrontCardViewController.h; path = Controller/FrontCardViewController.h; sourceTree = "<group>"; };
+		CE541E6E19D6668C00434B6A /* FrontCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FrontCardViewController.m; path = Controller/FrontCardViewController.m; sourceTree = "<group>"; };
+		CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FrontCardViewController.xib; path = Controller/FrontCardViewController.xib; sourceTree = "<group>"; };
+		CE541E7219D666A500434B6A /* BackCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackCardViewController.h; path = Controller/BackCardViewController.h; sourceTree = "<group>"; };
+		CE541E7319D666A500434B6A /* BackCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackCardViewController.m; path = Controller/BackCardViewController.m; sourceTree = "<group>"; };
+		CE541E7419D666A500434B6A /* BackCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BackCardViewController.xib; path = Controller/BackCardViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +143,12 @@
 		CE541E1819D65FA300434B6A /* GoiCard */ = {
 			isa = PBXGroup;
 			children = (
+				CE541E5D19D661FD00434B6A /* Global */,
+				CE541E5C19D661D900434B6A /* Libs */,
+				CE541E5819D6618700434B6A /* DBManager */,
+				CE541E5219D660F900434B6A /* Controller */,
+				CE541E5119D660D500434B6A /* Views */,
+				CE541E4D19D6600400434B6A /* Model */,
 				CE541E2119D65FA300434B6A /* AppDelegate.h */,
 				CE541E2219D65FA300434B6A /* AppDelegate.m */,
 				CE541E2A19D65FA300434B6A /* ViewController.h */,
@@ -158,6 +190,64 @@
 				CE541E3F19D65FA400434B6A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE541E4D19D6600400434B6A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE541E4E19D660C100434B6A /* Card.h */,
+				CE541E4F19D660C100434B6A /* Card.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CE541E5119D660D500434B6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CE541E5219D660F900434B6A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE541E5319D6615D00434B6A /* MainMenuViewController.h */,
+				CE541E5419D6615D00434B6A /* MainMenuViewController.m */,
+				CE541E5519D6615D00434B6A /* MainMenuViewController.xib */,
+				CE541E6819D6663F00434B6A /* AddCardViewController.h */,
+				CE541E6919D6663F00434B6A /* AddCardViewController.m */,
+				CE541E6A19D6663F00434B6A /* AddCardViewController.xib */,
+				CE541E6D19D6668C00434B6A /* FrontCardViewController.h */,
+				CE541E6E19D6668C00434B6A /* FrontCardViewController.m */,
+				CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */,
+				CE541E7219D666A500434B6A /* BackCardViewController.h */,
+				CE541E7319D666A500434B6A /* BackCardViewController.m */,
+				CE541E7419D666A500434B6A /* BackCardViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CE541E5819D6618700434B6A /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE541E5919D661AE00434B6A /* DBManager.h */,
+				CE541E5A19D661AE00434B6A /* DBManager.m */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
+		CE541E5C19D661D900434B6A /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		CE541E5D19D661FD00434B6A /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +326,10 @@
 				CE541E2719D65FA300434B6A /* Default@2x.png in Resources */,
 				CE541E2919D65FA300434B6A /* Default-568h@2x.png in Resources */,
 				CE541E2F19D65FA300434B6A /* ViewController.xib in Resources */,
+				CE541E5719D6615D00434B6A /* MainMenuViewController.xib in Resources */,
+				CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */,
+				CE541E7119D6668C00434B6A /* FrontCardViewController.xib in Resources */,
+				CE541E7619D666A500434B6A /* BackCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +367,12 @@
 				CE541E1F19D65FA300434B6A /* main.m in Sources */,
 				CE541E2319D65FA300434B6A /* AppDelegate.m in Sources */,
 				CE541E2C19D65FA300434B6A /* ViewController.m in Sources */,
+				CE541E5019D660C100434B6A /* Card.m in Sources */,
+				CE541E5619D6615D00434B6A /* MainMenuViewController.m in Sources */,
+				CE541E5B19D661AE00434B6A /* DBManager.m in Sources */,
+				CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */,
+				CE541E7019D6668C00434B6A /* FrontCardViewController.m in Sources */,
+				CE541E7519D666A500434B6A /* BackCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
