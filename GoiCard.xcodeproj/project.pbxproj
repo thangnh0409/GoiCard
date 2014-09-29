@@ -29,10 +29,16 @@
 		CE541E5B19D661AE00434B6A /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E5A19D661AE00434B6A /* DBManager.m */; };
 		CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E6919D6663F00434B6A /* AddCardViewController.m */; };
 		CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E6A19D6663F00434B6A /* AddCardViewController.xib */; };
-		CE541E7019D6668C00434B6A /* FrontCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E6E19D6668C00434B6A /* FrontCardViewController.m */; };
-		CE541E7119D6668C00434B6A /* FrontCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */; };
-		CE541E7519D666A500434B6A /* BackCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE541E7319D666A500434B6A /* BackCardViewController.m */; };
-		CE541E7619D666A500434B6A /* BackCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE541E7419D666A500434B6A /* BackCardViewController.xib */; };
+		CEAF51CB19D94228000CFCDF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAF51CA19D94228000CFCDF /* libsqlite3.0.dylib */; };
+		CEAF51D019D94519000CFCDF /* sc_flip.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51CE19D94519000CFCDF /* sc_flip.png */; };
+		CEAF51D119D94519000CFCDF /* sc_flip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51CF19D94519000CFCDF /* sc_flip@2x.png */; };
+		CEAF51D519D94989000CFCDF /* StudyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF51D319D94989000CFCDF /* StudyCardViewController.m */; };
+		CEAF51D619D94989000CFCDF /* StudyCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51D419D94989000CFCDF /* StudyCardViewController.xib */; };
+		CEAF51D819D951E8000CFCDF /* forget.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51D719D951E8000CFCDF /* forget.png */; };
+		CEAF51DA19D95533000CFCDF /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51D919D95533000CFCDF /* setting.png */; };
+		CEAF51DE19D955FF000CFCDF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF51DC19D955FF000CFCDF /* SettingViewController.m */; };
+		CEAF51DF19D955FF000CFCDF /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */; };
+		CEAF51E119D95906000CFCDF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51E019D95906000CFCDF /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +84,18 @@
 		CE541E6819D6663F00434B6A /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = Controller/AddCardViewController.h; sourceTree = "<group>"; };
 		CE541E6919D6663F00434B6A /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = Controller/AddCardViewController.m; sourceTree = "<group>"; };
 		CE541E6A19D6663F00434B6A /* AddCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardViewController.xib; path = Controller/AddCardViewController.xib; sourceTree = "<group>"; };
-		CE541E6D19D6668C00434B6A /* FrontCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FrontCardViewController.h; path = Controller/FrontCardViewController.h; sourceTree = "<group>"; };
-		CE541E6E19D6668C00434B6A /* FrontCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FrontCardViewController.m; path = Controller/FrontCardViewController.m; sourceTree = "<group>"; };
-		CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FrontCardViewController.xib; path = Controller/FrontCardViewController.xib; sourceTree = "<group>"; };
-		CE541E7219D666A500434B6A /* BackCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackCardViewController.h; path = Controller/BackCardViewController.h; sourceTree = "<group>"; };
-		CE541E7319D666A500434B6A /* BackCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackCardViewController.m; path = Controller/BackCardViewController.m; sourceTree = "<group>"; };
-		CE541E7419D666A500434B6A /* BackCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BackCardViewController.xib; path = Controller/BackCardViewController.xib; sourceTree = "<group>"; };
+		CEAF51CA19D94228000CFCDF /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		CEAF51CE19D94519000CFCDF /* sc_flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sc_flip.png; path = images/sc_flip.png; sourceTree = "<group>"; };
+		CEAF51CF19D94519000CFCDF /* sc_flip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sc_flip@2x.png"; path = "images/sc_flip@2x.png"; sourceTree = "<group>"; };
+		CEAF51D219D94989000CFCDF /* StudyCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudyCardViewController.h; path = Controller/StudyCardViewController.h; sourceTree = "<group>"; };
+		CEAF51D319D94989000CFCDF /* StudyCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudyCardViewController.m; path = Controller/StudyCardViewController.m; sourceTree = "<group>"; };
+		CEAF51D419D94989000CFCDF /* StudyCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StudyCardViewController.xib; path = Controller/StudyCardViewController.xib; sourceTree = "<group>"; };
+		CEAF51D719D951E8000CFCDF /* forget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forget.png; path = images/forget.png; sourceTree = "<group>"; };
+		CEAF51D919D95533000CFCDF /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting.png; path = images/setting.png; sourceTree = "<group>"; };
+		CEAF51DB19D955FF000CFCDF /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controller/SettingViewController.h; sourceTree = "<group>"; };
+		CEAF51DC19D955FF000CFCDF /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controller/SettingViewController.m; sourceTree = "<group>"; };
+		CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Controller/SettingViewController.xib; sourceTree = "<group>"; };
+		CEAF51E019D95906000CFCDF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = images/back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAF51CB19D94228000CFCDF /* libsqlite3.0.dylib in Frameworks */,
 				CE541E1319D65FA300434B6A /* UIKit.framework in Frameworks */,
 				CE541E1519D65FA300434B6A /* Foundation.framework in Frameworks */,
 				CE541E1719D65FA300434B6A /* CoreGraphics.framework in Frameworks */,
@@ -132,6 +145,7 @@
 		CE541E1119D65FA300434B6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF51CA19D94228000CFCDF /* libsqlite3.0.dylib */,
 				CE541E1219D65FA300434B6A /* UIKit.framework */,
 				CE541E1419D65FA300434B6A /* Foundation.framework */,
 				CE541E1619D65FA300434B6A /* CoreGraphics.framework */,
@@ -143,6 +157,7 @@
 		CE541E1819D65FA300434B6A /* GoiCard */ = {
 			isa = PBXGroup;
 			children = (
+				CEAF51CC19D944F5000CFCDF /* Resources */,
 				CE541E5D19D661FD00434B6A /* Global */,
 				CE541E5C19D661D900434B6A /* Libs */,
 				CE541E5819D6618700434B6A /* DBManager */,
@@ -217,12 +232,12 @@
 				CE541E6819D6663F00434B6A /* AddCardViewController.h */,
 				CE541E6919D6663F00434B6A /* AddCardViewController.m */,
 				CE541E6A19D6663F00434B6A /* AddCardViewController.xib */,
-				CE541E6D19D6668C00434B6A /* FrontCardViewController.h */,
-				CE541E6E19D6668C00434B6A /* FrontCardViewController.m */,
-				CE541E6F19D6668C00434B6A /* FrontCardViewController.xib */,
-				CE541E7219D666A500434B6A /* BackCardViewController.h */,
-				CE541E7319D666A500434B6A /* BackCardViewController.m */,
-				CE541E7419D666A500434B6A /* BackCardViewController.xib */,
+				CEAF51D219D94989000CFCDF /* StudyCardViewController.h */,
+				CEAF51D319D94989000CFCDF /* StudyCardViewController.m */,
+				CEAF51D419D94989000CFCDF /* StudyCardViewController.xib */,
+				CEAF51DB19D955FF000CFCDF /* SettingViewController.h */,
+				CEAF51DC19D955FF000CFCDF /* SettingViewController.m */,
+				CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,6 +263,26 @@
 			children = (
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		CEAF51CC19D944F5000CFCDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF51CD19D944FB000CFCDF /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEAF51CD19D944FB000CFCDF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF51E019D95906000CFCDF /* back.png */,
+				CEAF51D919D95533000CFCDF /* setting.png */,
+				CEAF51D719D951E8000CFCDF /* forget.png */,
+				CEAF51CE19D94519000CFCDF /* sc_flip.png */,
+				CEAF51CF19D94519000CFCDF /* sc_flip@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,14 +357,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE541E1D19D65FA300434B6A /* InfoPlist.strings in Resources */,
+				CEAF51D819D951E8000CFCDF /* forget.png in Resources */,
 				CE541E2519D65FA300434B6A /* Default.png in Resources */,
+				CEAF51DF19D955FF000CFCDF /* SettingViewController.xib in Resources */,
+				CEAF51E119D95906000CFCDF /* back.png in Resources */,
 				CE541E2719D65FA300434B6A /* Default@2x.png in Resources */,
 				CE541E2919D65FA300434B6A /* Default-568h@2x.png in Resources */,
 				CE541E2F19D65FA300434B6A /* ViewController.xib in Resources */,
 				CE541E5719D6615D00434B6A /* MainMenuViewController.xib in Resources */,
+				CEAF51D619D94989000CFCDF /* StudyCardViewController.xib in Resources */,
+				CEAF51DA19D95533000CFCDF /* setting.png in Resources */,
 				CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */,
-				CE541E7119D6668C00434B6A /* FrontCardViewController.xib in Resources */,
-				CE541E7619D666A500434B6A /* BackCardViewController.xib in Resources */,
+				CEAF51D019D94519000CFCDF /* sc_flip.png in Resources */,
+				CEAF51D119D94519000CFCDF /* sc_flip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +409,10 @@
 				CE541E2C19D65FA300434B6A /* ViewController.m in Sources */,
 				CE541E5019D660C100434B6A /* Card.m in Sources */,
 				CE541E5619D6615D00434B6A /* MainMenuViewController.m in Sources */,
+				CEAF51DE19D955FF000CFCDF /* SettingViewController.m in Sources */,
 				CE541E5B19D661AE00434B6A /* DBManager.m in Sources */,
+				CEAF51D519D94989000CFCDF /* StudyCardViewController.m in Sources */,
 				CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */,
-				CE541E7019D6668C00434B6A /* FrontCardViewController.m in Sources */,
-				CE541E7519D666A500434B6A /* BackCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +593,7 @@
 				CE541E4919D65FA400434B6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE541E4A19D65FA400434B6A /* Build configuration list for PBXNativeTarget "GoiCardTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +602,7 @@
 				CE541E4C19D65FA400434B6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
