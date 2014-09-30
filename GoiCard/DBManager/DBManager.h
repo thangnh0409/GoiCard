@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Card.h"
+#import <sqlite3.h>
 
 @interface DBManager : NSObject
+
++ (DBManager *)getInstance;
+- (Card *)getCardByLevel:(int)level;
 
 @end

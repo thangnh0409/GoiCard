@@ -10,4 +10,11 @@
 
 @interface Card : NSObject
 
+@property (nonatomic, assign) int cardId;
+@property (nonatomic, retain) NSString *wordKanji;
+@property (nonatomic, retain) NSString *wordHira;
+@property (nonatomic, retain) NSString *meanVi;
+@property (nonatomic, assign) int status;
+@property (nonatomic, assign) int topicId;
+
 @end
