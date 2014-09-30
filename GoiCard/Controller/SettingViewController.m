@@ -1,18 +1,18 @@
 //
-//  FrontCardViewController.m
+//  SettingViewController.m
 //  GoiCard
 //
-//  Created by thangnh on 9/27/14.
+//  Created by thangnh on 9/29/14.
 //  Copyright (c) 2014 thangnh. All rights reserved.
 //
 
-#import "FrontCardViewController.h"
+#import "SettingViewController.h"
 
-@interface FrontCardViewController ()
+@interface SettingViewController ()
 
 @end
 
-@implementation FrontCardViewController
+@implementation SettingViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,4 +35,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)backButtonClick:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)getListWordButtonClick:(id)sender {
+}
+
+- (IBAction)timeSettingBtnClick:(id)sender {
+}
 @end

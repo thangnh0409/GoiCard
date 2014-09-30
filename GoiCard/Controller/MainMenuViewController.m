@@ -7,6 +7,8 @@
 //
 
 #import "MainMenuViewController.h"
+#import "StudyCardViewController.h"
+#import "AddCardViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -36,11 +38,15 @@
 }
 
 - (IBAction)notStudyButtonClick:(id)sender {
+    StudyCardViewController *studyCardVC = [[StudyCardViewController alloc]initWithNibName:@"StudyCardViewController" bundle:nil];
+    [self.navigationController pushViewController:studyCardVC animated:YES];
 }
 
-- (IBAction)notRememberButtonCilck:(id)sender {
+- (IBAction)notRememberButtonClick:(id)sender {
 }
 
 - (IBAction)addNewCardButtonClick:(id)sender {
+    AddCardViewController *addCardVC = [[AddCardViewController alloc]initWithNibName:@"AddCardViewController" bundle:nil];
+    [self.navigationController pushViewController:addCardVC animated:YES];
 }
 @end

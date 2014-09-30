@@ -12,18 +12,19 @@
 
 @implementation DBManager
 
-static DBManager *shareInstance = nil;
+
+static DBManager *instance = NULL;
 
 + (DBManager *)getInstance
 {
-    if (!shareInstance) {
+    if (instance == nil) {
         @synchronized(self){
-            if (!shareInstance) {
-                shareInstance = [[DBManager alloc]init];
+            if (instance == nil) {
+                instance = [[DBManager alloc]init];
             }
         }
     }
-    return shareInstance;
+    return instance;
 }
 
 #pragma mark Class functions
@@ -48,21 +49,21 @@ static DBManager *shareInstance = nil;
 	}
 }
 
-#pragma mark - Get card
+#pragma mark - Get Card
 
 /**
- @brief: Get card for study by level 
- @param: level - level use selected in menu
-    level = 1 : new card
-    level = 2 : don't remember card
+ @brief: get card by selected level
+ @param:
+    level = 1 : no study
+    level = 2 : not remember
  */
-- (Card *)getCardByLevel:(int)level
+- (Card *)getCardWithLevel:(int)level
 {
-    Card *card = [[Card alloc] init];
+    Card *card = [[Card alloc]init];
     sqlite3 *database;
     sqlite3_open([[self getDBPath] UTF8String], &database);
     
-    NSString *sql = @"SELECT * FROM cards WHERE ";
+    NSString *sql = @"";
     sqlite3_stmt * statement;
     
     int sqlResult = sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, NULL);
@@ -73,17 +74,17 @@ static DBManager *shareInstance = nil;
         {
 
         }
+
     }else{
         printf( "could not prepare statemnt: %s\n", sqlite3_errmsg(database) );
+
     }
     
     sqlite3_reset(statement);
     sqlite3_finalize(statement);
     
     sqlite3_close(database);
-    
+
     return card;
 }
-
-
 @end
