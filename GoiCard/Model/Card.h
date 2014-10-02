@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSString *wordKanji;
 @property (nonatomic, retain) NSString *wordHira;
 @property (nonatomic, retain) NSString *meanVi;
+@property (nonatomic, retain) NSString *example;
 @property (nonatomic, assign) int status;
 @property (nonatomic, assign) int topicId;
 

@@ -15,6 +15,6 @@
 
 + (DBManager *)getInstance;
 - (Card *)getCardWithLevel:(int)level;
-
+- (BOOL)addCard:(Card *)card;
 
 @end

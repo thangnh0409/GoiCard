@@ -49,7 +49,7 @@ static DBManager *instance = NULL;
 	}
 }
 
-#pragma mark - Get Card
+#pragma mark - Card
 
 /**
  @brief: get card by selected level
@@ -63,7 +63,7 @@ static DBManager *instance = NULL;
     sqlite3 *database;
     sqlite3_open([[self getDBPath] UTF8String], &database);
     
-    NSString *sql = @"";
+    NSString *sql = [NSString stringWithFormat:@"SELECT c.cardId, c.word_kanji, c.word_hira, c.mean_vi, ex.example FROM card c JOIN word_example ex ON c.cardId = ex.cardId WHERE c.status = %d", level];
     sqlite3_stmt * statement;
     
     int sqlResult = sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, NULL);
@@ -72,7 +72,15 @@ static DBManager *instance = NULL;
     {
         while(sqlite3_step(statement) == SQLITE_ROW)
         {
-
+            card.cardId = (int)sqlite3_column_int(statement, 0);
+            char *word = (char*)sqlite3_column_text(statement, 1);
+            card.wordKanji = [NSString stringWithUTF8String:word];
+            char *word2 = (char*)sqlite3_column_text(statement, 2);
+            card.wordHira = [NSString stringWithUTF8String:word2];
+            char *meanChr = (char*)sqlite3_column_text(statement, 3);
+            card.meanVi = [NSString stringWithUTF8String:meanChr];
+            char *word3 = (char*)sqlite3_column_text(statement, 4);
+            card.example = [NSString stringWithUTF8String:word3];
         }
 
     }else{
@@ -86,5 +94,33 @@ static DBManager *instance = NULL;
     sqlite3_close(database);
 
     return card;
+}
+
+/**
+ @brief: add new card into table card and word_example
+ */
+- (BOOL)addCard:(Card *)card
+{
+    BOOL result = NO;
+    int rc = 0;
+    sqlite3 *database;
+    sqlite3_open([[self getDBPath] UTF8String], &database);
+    char *errMsg;
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO card (word_kanji, word_hira, mean_vi) VALUE (%@, %@, %@)", card.wordKanji, card.wordHira, card.meanVi];
+    rc = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errMsg);
+    if (rc == SQLITE_OK) {
+        result = YES;
+    }else
+        NSLog(@"error when insert data into database!");
+    
+    sql = [NSString stringWithFormat:@"INSERT INTO word_example (card_id, example) VALUE (SELECT last_insert_rowid(), %@)", card.example];
+    rc = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errMsg);
+    
+    if (rc == SQLITE_OK) {
+        result = YES;
+    }else
+        NSLog(@"error when insert data into database!");
+    
+    return result;
 }
 @end
