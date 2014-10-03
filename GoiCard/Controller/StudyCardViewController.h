@@ -19,6 +19,7 @@
 - (IBAction)backButtonClick:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *backCardView;
+@property (nonatomic, assign) int level;
 //back card view
 
 @property (strong, nonatomic) IBOutlet UILabel *lbHiragana;

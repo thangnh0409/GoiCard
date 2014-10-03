@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE28F5A719DE7CE400128817 /* card_database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CE28F5A619DE7CE400128817 /* card_database.sqlite */; };
 		CE541E1319D65FA300434B6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1219D65FA300434B6A /* UIKit.framework */; };
 		CE541E1519D65FA300434B6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1419D65FA300434B6A /* Foundation.framework */; };
 		CE541E1719D65FA300434B6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1619D65FA300434B6A /* CoreGraphics.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE28F5A619DE7CE400128817 /* card_database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = card_database.sqlite; path = DBManager/card_database.sqlite; sourceTree = "<group>"; };
 		CE541E0F19D65FA300434B6A /* GoiCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoiCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE541E1219D65FA300434B6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE541E1419D65FA300434B6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +82,7 @@
 		CE541E5419D6615D00434B6A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenuViewController.m; path = Controller/MainMenuViewController.m; sourceTree = "<group>"; };
 		CE541E5519D6615D00434B6A /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenuViewController.xib; path = Controller/MainMenuViewController.xib; sourceTree = "<group>"; };
 		CE541E5919D661AE00434B6A /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = DBManager/DBManager.h; sourceTree = "<group>"; };
-		CE541E5A19D661AE00434B6A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = DBManager/DBManager.m; sourceTree = "<group>"; };
+		CE541E5A19D661AE00434B6A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = DBManager.m; path = DBManager/DBManager.m; sourceTree = "<group>"; };
 		CE541E6819D6663F00434B6A /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddCardViewController.h; path = Controller/AddCardViewController.h; sourceTree = "<group>"; };
 		CE541E6919D6663F00434B6A /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddCardViewController.m; path = Controller/AddCardViewController.m; sourceTree = "<group>"; };
 		CE541E6A19D6663F00434B6A /* AddCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddCardViewController.xib; path = Controller/AddCardViewController.xib; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		CE541E5819D6618700434B6A /* DBManager */ = {
 			isa = PBXGroup;
 			children = (
+				CE28F5A619DE7CE400128817 /* card_database.sqlite */,
 				CE541E5919D661AE00434B6A /* DBManager.h */,
 				CE541E5A19D661AE00434B6A /* DBManager.m */,
 			);
@@ -369,6 +372,7 @@
 				CEAF51DA19D95533000CFCDF /* setting.png in Resources */,
 				CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */,
 				CEAF51D019D94519000CFCDF /* sc_flip.png in Resources */,
+				CE28F5A719DE7CE400128817 /* card_database.sqlite in Resources */,
 				CEAF51D119D94519000CFCDF /* sc_flip@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,10 +525,12 @@
 		CE541E4819D65FA400434B6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Dung (ANTZ3L7WXM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoiCard/GoiCard-Prefix.pch";
 				INFOPLIST_FILE = "GoiCard/GoiCard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7696a6bb-aa2e-4a2d-b911-4dd7ee13a274";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -532,10 +538,12 @@
 		CE541E4919D65FA400434B6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Dung (ANTZ3L7WXM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoiCard/GoiCard-Prefix.pch";
 				INFOPLIST_FILE = "GoiCard/GoiCard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7696a6bb-aa2e-4a2d-b911-4dd7ee13a274";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

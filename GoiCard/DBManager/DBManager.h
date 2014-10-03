@@ -14,7 +14,7 @@
 @interface DBManager : NSObject
 
 + (DBManager *)getInstance;
-- (Card *)getCardWithLevel:(int)level;
+- (NSMutableArray *)getCardsWithLevel:(int)level;
 - (BOOL)addCard:(Card *)card;
 
 @end

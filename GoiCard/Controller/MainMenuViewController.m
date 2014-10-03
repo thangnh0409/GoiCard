@@ -39,10 +39,14 @@
 
 - (IBAction)notStudyButtonClick:(id)sender {
     StudyCardViewController *studyCardVC = [[StudyCardViewController alloc]initWithNibName:@"StudyCardViewController" bundle:nil];
+    studyCardVC.level = 1;
     [self.navigationController pushViewController:studyCardVC animated:YES];
 }
 
 - (IBAction)notRememberButtonClick:(id)sender {
+    StudyCardViewController *studyCardVC = [[StudyCardViewController alloc]initWithNibName:@"StudyCardViewController" bundle:nil];
+    studyCardVC.level = 2;
+    [self.navigationController pushViewController:studyCardVC animated:YES];
 }
 
 - (IBAction)addNewCardButtonClick:(id)sender {
