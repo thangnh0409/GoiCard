@@ -40,6 +40,8 @@
 		CEAF51DE19D955FF000CFCDF /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF51DC19D955FF000CFCDF /* SettingViewController.m */; };
 		CEAF51DF19D955FF000CFCDF /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */; };
 		CEAF51E119D95906000CFCDF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAF51E019D95906000CFCDF /* back.png */; };
+		CEB8ED0119EF743F0015D054 /* ListWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8ECFF19EF743F0015D054 /* ListWordViewController.m */; };
+		CEB8ED0219EF743F0015D054 /* ListWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB8ED0019EF743F0015D054 /* ListWordViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,9 @@
 		CEAF51DC19D955FF000CFCDF /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controller/SettingViewController.m; sourceTree = "<group>"; };
 		CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Controller/SettingViewController.xib; sourceTree = "<group>"; };
 		CEAF51E019D95906000CFCDF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = images/back.png; sourceTree = "<group>"; };
+		CEB8ECFE19EF743F0015D054 /* ListWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListWordViewController.h; path = Controller/ListWordViewController.h; sourceTree = "<group>"; };
+		CEB8ECFF19EF743F0015D054 /* ListWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListWordViewController.m; path = Controller/ListWordViewController.m; sourceTree = "<group>"; };
+		CEB8ED0019EF743F0015D054 /* ListWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListWordViewController.xib; path = Controller/ListWordViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +245,9 @@
 				CEAF51DB19D955FF000CFCDF /* SettingViewController.h */,
 				CEAF51DC19D955FF000CFCDF /* SettingViewController.m */,
 				CEAF51DD19D955FF000CFCDF /* SettingViewController.xib */,
+				CEB8ECFE19EF743F0015D054 /* ListWordViewController.h */,
+				CEB8ECFF19EF743F0015D054 /* ListWordViewController.m */,
+				CEB8ED0019EF743F0015D054 /* ListWordViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -361,6 +369,7 @@
 			files = (
 				CE541E1D19D65FA300434B6A /* InfoPlist.strings in Resources */,
 				CEAF51D819D951E8000CFCDF /* forget.png in Resources */,
+				CEB8ED0219EF743F0015D054 /* ListWordViewController.xib in Resources */,
 				CE541E2519D65FA300434B6A /* Default.png in Resources */,
 				CEAF51DF19D955FF000CFCDF /* SettingViewController.xib in Resources */,
 				CEAF51E119D95906000CFCDF /* back.png in Resources */,
@@ -416,6 +425,7 @@
 				CEAF51DE19D955FF000CFCDF /* SettingViewController.m in Sources */,
 				CE541E5B19D661AE00434B6A /* DBManager.m in Sources */,
 				CEAF51D519D94989000CFCDF /* StudyCardViewController.m in Sources */,
+				CEB8ED0119EF743F0015D054 /* ListWordViewController.m in Sources */,
 				CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

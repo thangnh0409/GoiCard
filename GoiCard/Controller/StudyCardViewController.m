@@ -11,10 +11,11 @@
 #import "Card.h"
 #import "DBManager.h"
 
-@interface StudyCardViewController ()
+@interface StudyCardViewController () <UIAlertViewDelegate>
 {
     Card *_card;
     NSMutableArray *_arrCards;
+    int _cardIndex;
 }
 
 @end
@@ -35,13 +36,12 @@
     [super viewDidLoad];
     
     _arrCards = [[DBManager getInstance] getCardsWithLevel:self.level];
+    NSLog(@"NUM CARDS: %d", _arrCards.count);
     if (_arrCards.count > 0) {
         _card = [_arrCards objectAtIndex:0];
+        _cardIndex = 0;
         [self loadingCard];
     }
-    
-    UIGestureRecognizer *gestureRecognizer = [[UIGestureRecognizer alloc]initWithTarget:self action:@selector(nextCard:)];
-    [self.view addGestureRecognizer:gestureRecognizer];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -86,6 +86,9 @@
 }
 
 - (IBAction)forgetButtonClick:(id)sender {
+    // set level = 2 when not remember word
+    [[DBManager getInstance] updateCardStatus:2 andCardId:_card.cardId];
+    [self nextCard];
 }
 
 - (IBAction)settingButtonClick:(id)sender {
@@ -97,8 +100,32 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)nextCard:(UITapGestureRecognizer *)recognizer
+- (void)nextCard
 {
-    NSLog(@"get next card");
+    //get next card
+    _cardIndex ++;
+    if (_arrCards.count > _cardIndex) {
+        _card = [_arrCards objectAtIndex:_cardIndex];
+        [self loadingCard];
+    }else{
+        //Show finish study screen
+        
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"おめでとう!" message:@"完成して、またね" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+#pragma mark - Touch event
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"Get next card!");
+    [self nextCard];
+}
+
+#pragma mark - UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

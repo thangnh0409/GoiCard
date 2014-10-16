@@ -16,5 +16,7 @@
 + (DBManager *)getInstance;
 - (NSMutableArray *)getCardsWithLevel:(int)level;
 - (BOOL)addCard:(Card *)card;
+- (BOOL)updateCardStatus:(int)level andCardId:(int)cardId;
+- (NSMutableArray *)getAllWordByLevel:(int)level;
 
 @end

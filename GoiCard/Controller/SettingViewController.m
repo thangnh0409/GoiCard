@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "ListWordViewController.h"
 
 @interface SettingViewController ()
 
@@ -40,6 +41,8 @@
 }
 
 - (IBAction)getListWordButtonClick:(id)sender {
+    ListWordViewController *listWordVC = [[ListWordViewController alloc]initWithNibName:@"ListWordViewController" bundle:nil];
+    [self.navigationController pushViewController:listWordVC animated:YES];
 }
 
 - (IBAction)timeSettingBtnClick:(id)sender {

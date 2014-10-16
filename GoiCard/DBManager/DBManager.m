@@ -68,7 +68,7 @@ static DBManager *instance = NULL;
     sqlite3 *database;
     sqlite3_open([[self getDBPath] UTF8String], &database);
     
-    NSString *sql = [NSString stringWithFormat:@"SELECT c.cardId, c.word_kanji, c.word_hira, c.mean_vi, ex.example FROM card c JOIN word_example ex ON c.cardId = ex.cardId WHERE c.status = %d LIMIT %ld", level, num_word];
+    NSString *sql = [NSString stringWithFormat:@"SELECT c.cardId, c.word_kanji, c.word_hira, c.mean_vi, ex.example FROM card c JOIN word_example ex ON c.cardId = ex.cardId WHERE c.status = %d LIMIT %d", level, num_word];
     NSLog(@"SQL Log: %@", sql);
     sqlite3_stmt * statement;
     
@@ -105,6 +105,43 @@ static DBManager *instance = NULL;
 }
 
 /**
+ @brief: get all word by level from database
+ */
+- (NSMutableArray *)getAllWordByLevel:(int)level
+{
+    NSMutableArray *result = [[NSMutableArray alloc]init];
+    
+    sqlite3 *database;
+    sqlite3_open([[self getDBPath] UTF8String], &database);
+    
+    NSString *sql = [NSString stringWithFormat:@"SELECT word_kanji FROM card WHERE status = %d", level];
+    sqlite3_stmt * statement;
+    
+    int sqlResult = sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, NULL);
+    
+    if(sqlResult == SQLITE_OK)
+    {
+        while(sqlite3_step(statement) == SQLITE_ROW)
+        {
+            char *word = (char*)sqlite3_column_text(statement, 0);
+            NSString *wordKanji = [NSString stringWithUTF8String:word];
+            [result addObject:wordKanji];
+        }
+        
+    }else{
+        printf( "could not prepare statemnt: %s\n", sqlite3_errmsg(database) );
+        
+    }
+    
+    sqlite3_reset(statement);
+    sqlite3_finalize(statement);
+    
+    sqlite3_close(database);
+
+    return result;
+}
+
+/**
  @brief: add new card into table card and word_example
  */
 - (BOOL)addCard:(Card *)card
@@ -114,7 +151,7 @@ static DBManager *instance = NULL;
     sqlite3 *database;
     sqlite3_open([[self getDBPath] UTF8String], &database);
     char *errMsg;
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO card (word_kanji, word_hira, mean_vi) VALUES ('%@', '%@', '%@')", card.wordKanji, card.wordHira, card.meanVi];
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO card (word_kanji, word_hira, mean_vi, status) VALUES ('%@', '%@', '%@', 1)", card.wordKanji, card.wordHira, card.meanVi];
     NSLog(@"SQL: %@", sql);
     rc = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errMsg);
     if (rc == SQLITE_OK) {
@@ -146,6 +183,29 @@ static DBManager *instance = NULL;
     
     sqlite3_close(database);
     
+    return result;
+}
+
+/**
+ @brief: update card status
+ level = 1 : chua hoc
+ level = 2 : chua thuoc
+ level = 3 : da thuoc
+ */
+- (BOOL)updateCardStatus:(int)level andCardId:(int)cardId
+{
+    BOOL result = NO;
+    int rc = 0;
+    sqlite3 *database;
+    sqlite3_open([[self getDBPath] UTF8String], &database);
+    char *errMsg;
+    NSString *sql = [NSString stringWithFormat:@"UPDATE card SET status = %d WHERE cardId = %d", level, cardId];
+    rc = sqlite3_exec(database, [sql UTF8String], NULL, NULL, &errMsg);
+    if (rc == SQLITE_OK) {
+        result = YES;
+    }else
+        NSLog(@"error when update new value card status , MSG: %s!", errMsg);
+
     return result;
 }
 @end
