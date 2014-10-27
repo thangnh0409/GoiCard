@@ -116,9 +116,22 @@
             break;
     }
     cell.textLabel.font = [UIFont systemFontOfSize:12.0f];
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
+
+    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.contentView.backgroundColor = [UIColor clearColor];
+//    cell.backgroundColor = [UIColor clearColor];
+//    cell.backgroundView.backgroundColor = [UIColor clearColor];
+//    tableView.backgroundView.backgroundColor = [UIColor clearColor];
+
+}
 #pragma mark - TableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -54,8 +54,12 @@
     }else{
         BOOL success = [[DBManager getInstance] addCard:_card];
         if (success) {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"Add new card success!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:@"新カドーを追加うことを完成です!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [alert show];
+            self.tfHiragana.text = @"";
+            self.tfKanji.text = @"";
+            self.tfMean.text = @"";
+            self.tvExample.text = @"";
         }
     }
     

@@ -10,29 +10,29 @@
 	<string>GoiCard</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>33C8FDE9-3BD2-4D54-A2DC-94672BBF688E</key>
+		<key>E2A92FE0636C8E279A11ADE26404D22D3880C106</key>
 		<string>https://github.com/thangnh0409/GoiCard.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>GoiCard.xcodeproj/project.xcworkspace</string>
+	<string>GoiCard.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>33C8FDE9-3BD2-4D54-A2DC-94672BBF688E</key>
+		<key>E2A92FE0636C8E279A11ADE26404D22D3880C106</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/thangnh0409/GoiCard.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>33C8FDE9-3BD2-4D54-A2DC-94672BBF688E</string>
+	<string>E2A92FE0636C8E279A11ADE26404D22D3880C106</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>33C8FDE9-3BD2-4D54-A2DC-94672BBF688E</string>
+			<string>E2A92FE0636C8E279A11ADE26404D22D3880C106</string>
 			<key>IDESourceControlWCCName</key>
 			<string>GoiCard</string>
 		</dict>
