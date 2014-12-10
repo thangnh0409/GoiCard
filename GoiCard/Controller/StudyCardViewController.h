@@ -15,8 +15,10 @@
 - (IBAction)flipBtnFontCardClick:(id)sender;
 - (IBAction)flipBackCardClick:(id)sender;
 - (IBAction)forgetButtonClick:(id)sender;
+- (IBAction)rememberButtonClick:(id)sender;
 - (IBAction)settingButtonClick:(id)sender;
 - (IBAction)backButtonClick:(id)sender;
+- (IBAction)getNextCard:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *backCardView;
 @property (nonatomic, assign) int level;

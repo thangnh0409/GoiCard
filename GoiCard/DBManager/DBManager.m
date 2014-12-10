@@ -7,6 +7,7 @@
 //
 
 #import "DBManager.h"
+#import "Constant.h"
 
 #define DATABASE_NAME @"card_database.sqlite"
 
@@ -61,14 +62,15 @@ static DBManager *instance = NULL;
 - (NSMutableArray *)getCardsWithLevel:(int)level
 {
     NSMutableArray *result = [[NSMutableArray alloc]init];
-    NSInteger num_word = [[NSUserDefaults standardUserDefaults]integerForKey:@"WORD_BY_TURN"];
+    NSInteger num_word = [[NSUserDefaults standardUserDefaults]integerForKey:NUM_WORD_SETTING];
+    NSLog(@"NUM WORD = %ld", (long)num_word);
     if (num_word == 0) {
         num_word = 5;
     }
     sqlite3 *database;
     sqlite3_open([[self getDBPath] UTF8String], &database);
     
-    NSString *sql = [NSString stringWithFormat:@"SELECT c.cardId, c.word_kanji, c.word_hira, c.mean_vi, ex.example FROM card c JOIN word_example ex ON c.cardId = ex.cardId WHERE c.status = %d LIMIT %d", level, num_word];
+    NSString *sql = [NSString stringWithFormat:@"SELECT c.cardId, c.word_kanji, c.word_hira, c.mean_vi, ex.example FROM card c JOIN word_example ex ON c.cardId = ex.cardId WHERE c.status = %d LIMIT %ld", level, (long)num_word];
     NSLog(@"SQL Log: %@", sql);
     sqlite3_stmt * statement;
     

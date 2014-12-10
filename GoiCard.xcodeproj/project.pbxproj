@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		CE28F5A719DE7CE400128817 /* card_database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CE28F5A619DE7CE400128817 /* card_database.sqlite */; };
+		CE2F24241A3192A0004CF8CA /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2F24221A3192A0004CF8CA /* tick.png */; };
+		CE2F24251A3192A0004CF8CA /* x-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2F24231A3192A0004CF8CA /* x-mark.png */; };
+		CE2F24271A319947004CF8CA /* flipBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2F24261A319947004CF8CA /* flipBtn.png */; };
+		CE2F24291A319EC3004CF8CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2F24281A319EC3004CF8CA /* QuartzCore.framework */; };
+		CE2F242B1A31A2E4004CF8CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2F242A1A31A2E4004CF8CA /* Images.xcassets */; };
+		CE2F24351A31A555004CF8CA /* TimeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2F24331A31A555004CF8CA /* TimeSettingViewController.m */; };
+		CE2F24361A31A555004CF8CA /* TimeSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE2F24341A31A555004CF8CA /* TimeSettingViewController.xib */; };
 		CE541E1319D65FA300434B6A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1219D65FA300434B6A /* UIKit.framework */; };
 		CE541E1519D65FA300434B6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1419D65FA300434B6A /* Foundation.framework */; };
 		CE541E1719D65FA300434B6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE541E1619D65FA300434B6A /* CoreGraphics.framework */; };
@@ -56,6 +63,15 @@
 
 /* Begin PBXFileReference section */
 		CE28F5A619DE7CE400128817 /* card_database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = card_database.sqlite; path = DBManager/card_database.sqlite; sourceTree = "<group>"; };
+		CE2F24211A3189AB004CF8CA /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Constant/Constant.h; sourceTree = "<group>"; };
+		CE2F24221A3192A0004CF8CA /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tick.png; path = images/tick.png; sourceTree = "<group>"; };
+		CE2F24231A3192A0004CF8CA /* x-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "x-mark.png"; path = "images/x-mark.png"; sourceTree = "<group>"; };
+		CE2F24261A319947004CF8CA /* flipBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flipBtn.png; path = images/flipBtn.png; sourceTree = "<group>"; };
+		CE2F24281A319EC3004CF8CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE2F242A1A31A2E4004CF8CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE2F24321A31A555004CF8CA /* TimeSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeSettingViewController.h; path = Controller/TimeSettingViewController.h; sourceTree = "<group>"; };
+		CE2F24331A31A555004CF8CA /* TimeSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeSettingViewController.m; path = Controller/TimeSettingViewController.m; sourceTree = "<group>"; };
+		CE2F24341A31A555004CF8CA /* TimeSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TimeSettingViewController.xib; path = Controller/TimeSettingViewController.xib; sourceTree = "<group>"; };
 		CE541E0F19D65FA300434B6A /* GoiCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoiCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE541E1219D65FA300434B6A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE541E1419D65FA300434B6A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2F24291A319EC3004CF8CA /* QuartzCore.framework in Frameworks */,
 				CEAF51CB19D94228000CFCDF /* libsqlite3.0.dylib in Frameworks */,
 				CE541E1319D65FA300434B6A /* UIKit.framework in Frameworks */,
 				CE541E1519D65FA300434B6A /* Foundation.framework in Frameworks */,
@@ -152,6 +169,7 @@
 		CE541E1119D65FA300434B6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F24281A319EC3004CF8CA /* QuartzCore.framework */,
 				CEAF51CA19D94228000CFCDF /* libsqlite3.0.dylib */,
 				CE541E1219D65FA300434B6A /* UIKit.framework */,
 				CE541E1419D65FA300434B6A /* Foundation.framework */,
@@ -176,6 +194,7 @@
 				CE541E2A19D65FA300434B6A /* ViewController.h */,
 				CE541E2B19D65FA300434B6A /* ViewController.m */,
 				CE541E2D19D65FA300434B6A /* ViewController.xib */,
+				CE2F242A1A31A2E4004CF8CA /* Images.xcassets */,
 				CE541E1919D65FA300434B6A /* Supporting Files */,
 			);
 			path = GoiCard;
@@ -248,6 +267,9 @@
 				CEB8ECFE19EF743F0015D054 /* ListWordViewController.h */,
 				CEB8ECFF19EF743F0015D054 /* ListWordViewController.m */,
 				CEB8ED0019EF743F0015D054 /* ListWordViewController.xib */,
+				CE2F24321A31A555004CF8CA /* TimeSettingViewController.h */,
+				CE2F24331A31A555004CF8CA /* TimeSettingViewController.m */,
+				CE2F24341A31A555004CF8CA /* TimeSettingViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -272,6 +294,7 @@
 		CE541E5D19D661FD00434B6A /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F24211A3189AB004CF8CA /* Constant.h */,
 			);
 			name = Global;
 			sourceTree = "<group>";
@@ -287,6 +310,9 @@
 		CEAF51CD19D944FB000CFCDF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F24261A319947004CF8CA /* flipBtn.png */,
+				CE2F24221A3192A0004CF8CA /* tick.png */,
+				CE2F24231A3192A0004CF8CA /* x-mark.png */,
 				CEAF51E019D95906000CFCDF /* back.png */,
 				CEAF51D919D95533000CFCDF /* setting.png */,
 				CEAF51D719D951E8000CFCDF /* forget.png */,
@@ -333,7 +359,7 @@
 			name = GoiCardTests;
 			productName = GoiCardTests;
 			productReference = CE541E3519D65FA400434B6A /* GoiCardTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -343,6 +369,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = thangnh;
+				TargetAttributes = {
+					CE541E0E19D65FA300434B6A = {
+						DevelopmentTeam = 46W25C8KDG;
+					};
+				};
 			};
 			buildConfigurationList = CE541E0A19D65FA300434B6A /* Build configuration list for PBXProject "GoiCard" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -368,19 +399,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE541E1D19D65FA300434B6A /* InfoPlist.strings in Resources */,
+				CE2F242B1A31A2E4004CF8CA /* Images.xcassets in Resources */,
 				CEAF51D819D951E8000CFCDF /* forget.png in Resources */,
 				CEB8ED0219EF743F0015D054 /* ListWordViewController.xib in Resources */,
 				CE541E2519D65FA300434B6A /* Default.png in Resources */,
 				CEAF51DF19D955FF000CFCDF /* SettingViewController.xib in Resources */,
+				CE2F24251A3192A0004CF8CA /* x-mark.png in Resources */,
 				CEAF51E119D95906000CFCDF /* back.png in Resources */,
 				CE541E2719D65FA300434B6A /* Default@2x.png in Resources */,
 				CE541E2919D65FA300434B6A /* Default-568h@2x.png in Resources */,
+				CE2F24271A319947004CF8CA /* flipBtn.png in Resources */,
 				CE541E2F19D65FA300434B6A /* ViewController.xib in Resources */,
 				CE541E5719D6615D00434B6A /* MainMenuViewController.xib in Resources */,
 				CEAF51D619D94989000CFCDF /* StudyCardViewController.xib in Resources */,
 				CEAF51DA19D95533000CFCDF /* setting.png in Resources */,
+				CE2F24241A3192A0004CF8CA /* tick.png in Resources */,
 				CE541E6C19D6663F00434B6A /* AddCardViewController.xib in Resources */,
 				CEAF51D019D94519000CFCDF /* sc_flip.png in Resources */,
+				CE2F24361A31A555004CF8CA /* TimeSettingViewController.xib in Resources */,
 				CE28F5A719DE7CE400128817 /* card_database.sqlite in Resources */,
 				CEAF51D119D94519000CFCDF /* sc_flip@2x.png in Resources */,
 			);
@@ -427,6 +463,7 @@
 				CEAF51D519D94989000CFCDF /* StudyCardViewController.m in Sources */,
 				CEB8ED0119EF743F0015D054 /* ListWordViewController.m in Sources */,
 				CE541E6B19D6663F00434B6A /* AddCardViewController.m in Sources */,
+				CE2F24351A31A555004CF8CA /* TimeSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,12 +572,15 @@
 		CE541E4819D65FA400434B6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Dung (ANTZ3L7WXM)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoiCard/GoiCard-Prefix.pch";
 				INFOPLIST_FILE = "GoiCard/GoiCard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7696a6bb-aa2e-4a2d-b911-4dd7ee13a274";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,12 +588,15 @@
 		CE541E4919D65FA400434B6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tran Dung (ANTZ3L7WXM)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoiCard/GoiCard-Prefix.pch";
 				INFOPLIST_FILE = "GoiCard/GoiCard-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7696a6bb-aa2e-4a2d-b911-4dd7ee13a274";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

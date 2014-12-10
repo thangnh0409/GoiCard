@@ -10,6 +10,7 @@
 #import "SettingViewController.h"
 #import "Card.h"
 #import "DBManager.h"
+#import "Constant.h"
 
 @interface StudyCardViewController () <UIAlertViewDelegate>
 {
@@ -36,7 +37,7 @@
     [super viewDidLoad];
     
     _arrCards = [[DBManager getInstance] getCardsWithLevel:self.level];
-    NSLog(@"NUM CARDS: %d", _arrCards.count);
+//    NSLog(@"NUM CARDS: %d", _arrCards.count);
     if (_arrCards.count > 0) {
         _card = [_arrCards objectAtIndex:0];
         _cardIndex = 0;
@@ -48,7 +49,19 @@
 
 - (void)loadingCard
 {
+    CATransition *animation = [CATransition animation];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    animation.duration = 1.0f;
+    if (arc4random() % 2 == 0) {
+        animation.type = kCATransitionMoveIn;
+        [self.lbWord.layer addAnimation:animation forKey:@"kCATransitionMoveIn"];
+    }else{
+        animation.type = kCATruncationMiddle;
+        [self.lbWord.layer addAnimation:animation forKey:@"kCATruncationMiddle"];
+    }
+    
     self.lbWord.text = _card.wordKanji;
+    
     self.lbHiragana.text = _card.wordHira;
     self.lbMean.text = _card.meanVi;
     self.lbExample.text = _card.example;
@@ -87,8 +100,12 @@
 
 - (IBAction)forgetButtonClick:(id)sender {
     // set level = 2 when not remember word
-    [[DBManager getInstance] updateCardStatus:2 andCardId:_card.cardId];
+    [[DBManager getInstance] updateCardStatus: NOT_REMEMBER andCardId:_card.cardId];
     [self nextCard];
+}
+
+- (IBAction)rememberButtonClick:(id)sender {
+    [[DBManager getInstance] updateCardStatus: REMEMBER andCardId:_card.cardId];
 }
 
 - (IBAction)settingButtonClick:(id)sender {
@@ -98,6 +115,11 @@
 
 - (IBAction)backButtonClick:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)getNextCard:(id)sender {
+    NSLog(@"Get next card!");
+    [self nextCard];
 }
 
 - (void)nextCard
@@ -119,8 +141,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"Get next card!");
-    [self nextCard];
+    
 }
 
 #pragma mark - UIAlertView Delegate

@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "ListWordViewController.h"
+#import "TimeSettingViewController.h"
 
 @interface SettingViewController ()
 
@@ -46,5 +47,7 @@
 }
 
 - (IBAction)timeSettingBtnClick:(id)sender {
+    TimeSettingViewController *timeSettingVC = [[TimeSettingViewController alloc]initWithNibName:@"TimeSettingViewController" bundle:nil];
+    [self.navigationController pushViewController:timeSettingVC animated:YES];
 }
 @end
